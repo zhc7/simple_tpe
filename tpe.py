@@ -122,6 +122,7 @@ def optimize(fn, n, *args, **kwargs):
     best = (None, np.inf)
     out_size = n / 20
     for i in range(n):
+        print(f"#{i}")
         x = search(history, *args, **kwargs)
         loss = fn(**x)
         history.append((x, loss))
